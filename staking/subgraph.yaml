@@ -17,6 +17,8 @@ dataSources:
       language: wasm/assemblyscript
       entities:
         - EmergencyWithdrawal
+        - LoanRepaid
+        - LoanTaken
         - OwnershipTransferred
         - Paused
         - RewardRateUpdated
@@ -30,6 +32,10 @@ dataSources:
       eventHandlers:
         - event: EmergencyWithdrawal(indexed address,indexed uint256)
           handler: handleEmergencyWithdrawal
+        - event: LoanRepaid(indexed address,indexed uint256)
+          handler: handleLoanRepaid
+        - event: LoanTaken(indexed address,indexed uint256)
+          handler: handleLoanTaken
         - event: OwnershipTransferred(indexed address,indexed address)
           handler: handleOwnershipTransferred
         - event: Paused(address)

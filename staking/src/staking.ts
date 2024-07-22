@@ -1,5 +1,7 @@
 import {
   EmergencyWithdrawal as EmergencyWithdrawalEvent,
+  LoanRepaid as LoanRepaidEvent,
+  LoanTaken as LoanTakenEvent,
   OwnershipTransferred as OwnershipTransferredEvent,
   Paused as PausedEvent,
   RewardRateUpdated as RewardRateUpdatedEvent,
@@ -10,6 +12,8 @@ import {
 } from "../generated/Staking/Staking"
 import {
   EmergencyWithdrawal,
+  LoanRepaid,
+  LoanTaken,
   OwnershipTransferred,
   Paused,
   RewardRateUpdated,
@@ -23,6 +27,34 @@ export function handleEmergencyWithdrawal(
   event: EmergencyWithdrawalEvent
 ): void {
   let entity = new EmergencyWithdrawal(
+    event.transaction.hash.concatI32(event.logIndex.toI32())
+  )
+  entity.user = event.params.user
+  entity.amount = event.params.amount
+
+  entity.blockNumber = event.block.number
+  entity.blockTimestamp = event.block.timestamp
+  entity.transactionHash = event.transaction.hash
+
+  entity.save()
+}
+
+export function handleLoanRepaid(event: LoanRepaidEvent): void {
+  let entity = new LoanRepaid(
+    event.transaction.hash.concatI32(event.logIndex.toI32())
+  )
+  entity.user = event.params.user
+  entity.amount = event.params.amount
+
+  entity.blockNumber = event.block.number
+  entity.blockTimestamp = event.block.timestamp
+  entity.transactionHash = event.transaction.hash
+
+  entity.save()
+}
+
+export function handleLoanTaken(event: LoanTakenEvent): void {
+  let entity = new LoanTaken(
     event.transaction.hash.concatI32(event.logIndex.toI32())
   )
   entity.user = event.params.user

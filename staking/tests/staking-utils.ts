@@ -2,6 +2,8 @@ import { newMockEvent } from "matchstick-as"
 import { ethereum, Address, BigInt } from "@graphprotocol/graph-ts"
 import {
   EmergencyWithdrawal,
+  LoanRepaid,
+  LoanTaken,
   OwnershipTransferred,
   Paused,
   RewardRateUpdated,
@@ -27,6 +29,39 @@ export function createEmergencyWithdrawalEvent(
   )
 
   return emergencyWithdrawalEvent
+}
+
+export function createLoanRepaidEvent(
+  user: Address,
+  amount: BigInt
+): LoanRepaid {
+  let loanRepaidEvent = changetype<LoanRepaid>(newMockEvent())
+
+  loanRepaidEvent.parameters = new Array()
+
+  loanRepaidEvent.parameters.push(
+    new ethereum.EventParam("user", ethereum.Value.fromAddress(user))
+  )
+  loanRepaidEvent.parameters.push(
+    new ethereum.EventParam("amount", ethereum.Value.fromUnsignedBigInt(amount))
+  )
+
+  return loanRepaidEvent
+}
+
+export function createLoanTakenEvent(user: Address, amount: BigInt): LoanTaken {
+  let loanTakenEvent = changetype<LoanTaken>(newMockEvent())
+
+  loanTakenEvent.parameters = new Array()
+
+  loanTakenEvent.parameters.push(
+    new ethereum.EventParam("user", ethereum.Value.fromAddress(user))
+  )
+  loanTakenEvent.parameters.push(
+    new ethereum.EventParam("amount", ethereum.Value.fromUnsignedBigInt(amount))
+  )
+
+  return loanTakenEvent
 }
 
 export function createOwnershipTransferredEvent(
