@@ -51,3 +51,49 @@ dataSources:
         - event: Withdrawn(indexed address,indexed uint256)
           handler: handleWithdrawn
       file: ./src/staking.ts
+  - kind: ethereum
+    name: StakingToken
+    network: localhost
+    source:
+      address: "0x5FbDB2315678afecb367f032d93F642f64180aa3"
+      abi: StakingToken
+      startBlock: 0
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - Approval
+        - Transfer
+      abis:
+        - name: StakingToken
+          file: ./abis/StakingToken.json
+      eventHandlers:
+        - event: Approval(indexed address,indexed address,uint256)
+          handler: handleApproval
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+      file: ./src/staking-token.ts
+  - kind: ethereum
+    name: RewardToken
+    network: localhost
+    source:
+      address: "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512"
+      abi: RewardToken
+      startBlock: 0
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - RewardTokenApproval
+        - RewardTokenTransfer
+      abis:
+        - name: RewardToken
+          file: ./abis/RewardToken.json
+      eventHandlers:
+        - event: Approval(indexed address,indexed address,uint256)
+          handler: handleApproval
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+      file: ./src/reward-token.ts
