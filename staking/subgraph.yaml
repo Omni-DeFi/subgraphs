@@ -97,3 +97,32 @@ dataSources:
         - event: Transfer(indexed address,indexed address,uint256)
           handler: handleTransfer
       file: ./src/reward-token.ts
+  - kind: ethereum
+    name: AMM
+    network: localhost
+    source:
+      address: "0xDc64a140Aa3E981100a9becA4E685f962f0cF6C9"
+      abi: AMM
+      startBlock: 0
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - LiquidityProvided
+        - LiquidityRemoved
+        - AMMOwnershipTransferred
+        - Swapped
+      abis:
+        - name: AMM
+          file: ./abis/AMM.json
+      eventHandlers:
+        - event: LiquidityProvided(indexed address,indexed uint256,indexed uint256)
+          handler: handleLiquidityProvided
+        - event: LiquidityRemoved(indexed address,indexed uint256,indexed uint256)
+          handler: handleLiquidityRemoved
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferred
+        - event: Swapped(indexed address,indexed address,indexed address,uint256,uint256)
+          handler: handleSwapped
+      file: ./src/amm.ts
