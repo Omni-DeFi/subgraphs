@@ -5,7 +5,7 @@ import {
   LiquidityRemoved,
   OwnershipTransferred,
   Swapped
-} from "../generated/AMM/AMM"
+} from "../generated/amm/amm"
 
 export function createLiquidityProvidedEvent(
   provider: Address,

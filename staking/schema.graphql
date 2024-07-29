@@ -142,7 +142,7 @@ type LiquidityRemoved @entity(immutable: true) {
   transactionHash: Bytes!
 }
 
-type AMMOwnershipTransferred @entity(immutable: true) {
+type ammOwnershipTransferred @entity(immutable: true) {
   id: Bytes!
   previousOwner: Bytes! # address
   newOwner: Bytes! # address

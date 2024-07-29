@@ -98,11 +98,11 @@ dataSources:
           handler: handleTransfer
       file: ./src/reward-token.ts
   - kind: ethereum
-    name: AMM
+    name: amm
     network: localhost
     source:
       address: "0xDc64a140Aa3E981100a9becA4E685f962f0cF6C9"
-      abi: AMM
+      abi: amm
       startBlock: 0
     mapping:
       kind: ethereum/events
@@ -111,11 +111,11 @@ dataSources:
       entities:
         - LiquidityProvided
         - LiquidityRemoved
-        - AMMOwnershipTransferred
+        - ammOwnershipTransferred
         - Swapped
       abis:
-        - name: AMM
-          file: ./abis/AMM.json
+        - name: amm
+          file: ./abis/amm.json
       eventHandlers:
         - event: LiquidityProvided(indexed address,indexed uint256,indexed uint256)
           handler: handleLiquidityProvided

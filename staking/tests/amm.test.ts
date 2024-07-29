@@ -8,7 +8,7 @@ import {
 } from "matchstick-as/assembly/index"
 import { Address, BigInt } from "@graphprotocol/graph-ts"
 import { LiquidityProvided } from "../generated/schema"
-import { LiquidityProvided as LiquidityProvidedEvent } from "../generated/AMM/AMM"
+import { LiquidityProvided as LiquidityProvidedEvent } from "../generated/amm/amm"
 import { handleLiquidityProvided } from "../src/amm"
 import { createLiquidityProvidedEvent } from "./amm-utils"
 

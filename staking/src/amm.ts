@@ -3,7 +3,7 @@ import {
   LiquidityRemoved as LiquidityRemovedEvent,
   OwnershipTransferred as OwnershipTransferredEvent,
   Swapped as SwappedEvent,
-} from "../generated/AMM/AMM"
+} from "../generated/amm/amm"
 import {
   LiquidityProvided,
   LiquidityRemoved,
