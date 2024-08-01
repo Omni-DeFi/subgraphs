@@ -162,3 +162,15 @@ type Swapped @entity(immutable: true) {
   blockTimestamp: BigInt!
   transactionHash: Bytes!
 }
+
+type Volume @entity {
+  id: ID!
+  timestamp: BigInt!
+  volume: BigDecimal!
+}
+
+type TVL @entity {
+  id: ID!
+  timestamp: BigInt!
+  tvl: BigDecimal!
+}

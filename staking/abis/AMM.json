@@ -135,6 +135,19 @@
     "type": "event"
   },
   {
+    "inputs": [
+      { "internalType": "address", "name": "user", "type": "address" },
+      { "internalType": "uint256", "name": "percentInWei", "type": "uint256" }
+    ],
+    "name": "calculateUserLiquidityWithdrawal",
+    "outputs": [
+      { "internalType": "uint256", "name": "token1Amount", "type": "uint256" },
+      { "internalType": "uint256", "name": "token2Amount", "type": "uint256" }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
     "inputs": [],
     "name": "getCurrentPrices",
     "outputs": [
@@ -174,6 +187,18 @@
       { "internalType": "uint256", "name": "amountOut", "type": "uint256" },
       { "internalType": "uint256", "name": "fee", "type": "uint256" },
       { "internalType": "uint256", "name": "newPrice", "type": "uint256" }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "address", "name": "user", "type": "address" }
+    ],
+    "name": "getUserLiquidity",
+    "outputs": [
+      { "internalType": "uint256", "name": "token1Amount", "type": "uint256" },
+      { "internalType": "uint256", "name": "token2Amount", "type": "uint256" }
     ],
     "stateMutability": "view",
     "type": "function"
