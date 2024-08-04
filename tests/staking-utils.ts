@@ -11,7 +11,7 @@ import {
   Staked,
   Unpaused,
   Withdrawn
-} from "../generated/Staking/Staking"
+} from "../generated/staking/staking"
 
 export function createEmergencyWithdrawalEvent(
   user: Address,
