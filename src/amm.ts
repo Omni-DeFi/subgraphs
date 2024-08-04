@@ -1,4 +1,4 @@
-import { BigDecimal, bigDecimal } from "@graphprotocol/graph-ts";
+import { BigDecimal } from "@graphprotocol/graph-ts";
 import {
   LiquidityProvided as LiquidityProvidedEvent,
   LiquidityRemoved as LiquidityRemovedEvent,
@@ -54,14 +54,16 @@ export function handleLiquidityRemoved(event: LiquidityRemovedEvent): void {
 
   entity.save();
 
-  let tvlEntity = TVL.load(event.block.timestamp.toString())
+  let tvlEntity = TVL.load(event.block.timestamp.toString());
   if (tvlEntity == null) {
-    tvlEntity = new TVL(event.block.timestamp.toString())
-    tvlEntity.timestamp = event.block.timestamp
-    tvlEntity.tvl = BigDecimal.fromString("0")
+    tvlEntity = new TVL(event.block.timestamp.toString());
+    tvlEntity.timestamp = event.block.timestamp;
+    tvlEntity.tvl = BigDecimal.fromString("0");
   }
-  tvlEntity.tvl = tvlEntity.tvl.minus(event.params.amount1.toBigDecimal()).minus(event.params.amount2.toBigDecimal())
-  tvlEntity.save()
+  tvlEntity.tvl = tvlEntity.tvl
+    .minus(event.params.amount1.toBigDecimal())
+    .minus(event.params.amount2.toBigDecimal());
+  tvlEntity.save();
 }
 
 export function handleOwnershipTransferred(
