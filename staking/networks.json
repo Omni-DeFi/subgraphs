@@ -1,0 +1,8 @@
+{
+  "optimism-sepolia": {
+    "Staking": {
+      "address": "0x592bCA70afd3ef10c91bE4fc5c07Dcc7f1AC890d",
+      "startBlock": 0
+    }
+  }
+}
