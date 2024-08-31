@@ -1,13 +1,13 @@
 {
-  "name": "staking",
+  "name": "astradefi",
   "license": "UNLICENSED",
   "scripts": {
     "codegen": "graph codegen",
     "build": "graph build",
-    "deploy": "graph deploy --node https://api.studio.thegraph.com/deploy/ omnidefi",
-    "create-local": "graph create --node http://localhost:8020/ omnidefi",
-    "remove-local": "graph remove --node http://localhost:8020/ omnidefi",
-    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 omnidefi",
+    "deploy": "graph deploy --node https://api.studio.thegraph.com/deploy/ astradefi",
+    "create-local": "graph create --node http://localhost:8020/ astradefi",
+    "remove-local": "graph remove --node http://localhost:8020/ astradefi",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 astradefi",
     "test": "graph test"
   },
   "dependencies": {

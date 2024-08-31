@@ -1,0 +1,115 @@
+{
+  "mode-testnet": {
+    "Staking": {
+      "address": "0xdfE84AAb2A3E9Db1b35A64Ccf05faB6bFfBb63b7",
+      "startBlock": 17666362
+    },
+    "StakingToken": {
+      "address": "0x74df726F77387ebDA41b0b52056A862f41237C0d",
+      "startBlock": 17666345
+    },
+    "RewardToken": {
+      "address": "0x742Df2E9B29bA22687FC509f9356776176273DaB",
+      "startBlock": 17666353
+    },
+    "AMM": {
+      "address": "0x669C5f1a698Ab3a56A1a85b64dCFFE5fE2bB7e1F",
+      "startBlock": 17666378
+    }
+  },
+
+  "base-sepolia": {
+    "Staking": {
+      "address": "0x3B61C76fAD6c88FA565Ed538524d10C25f63ee75",
+      "startBlock": 13757123
+    },
+    "StakingToken": {
+      "address": "0x09572c39b311834047b694EC77A614822ffBb1ff",
+      "startBlock": 13757105
+    },
+    "RewardToken": {
+      "address": "0xc0C357bCCc6CFfeef97b792c72774b4c47B3D884",
+      "startBlock": 13757114
+    },
+    "AMM": {
+      "address": "0x21fb6F632054669EA240adAF0BCd6930Ba029A82",
+      "startBlock": 13757139
+    }
+  },
+
+  "optimism-sepolia": {
+    "Staking": {
+      "address": "0x592bCA70afd3ef10c91bE4fc5c07Dcc7f1AC890d",
+      "startBlock": 16603306
+    },
+    "StakingToken": {
+      "address": "0xBD22719907F3839EEc1f7482Af0788e26ed447F9",
+      "startBlock": 16603284
+    },
+    "RewardToken": {
+      "address": "0x21fb6F632054669EA240adAF0BCd6930Ba029A82",
+      "startBlock": 16603295
+    },
+    "AMM": {
+      "address": "0x533557766fBeC9825700A8Fbde88bf7B3A28dEBd",
+      "startBlock": 16603326
+    }
+  },
+
+  "sepolia": {
+    "StakingToken": {
+      "address": "0x8fA88684F4233AbF617DE993bdFD3B4b0077626B",
+      "startBlock": 6599170
+    },
+    "RewardToken": {
+      "address": "0x4e7059F901c8D5e0636c5733559ed9a3440d2408",
+      "startBlock": 6599175
+    },
+    "AMM": {
+      "address": "0x0Db6DA5FE73Aa80c82ccbC5C805f298718B5ed34",
+      "startBlock": 6599191
+    },
+    "Staking": {
+      "address": "0x5A67Fe909861a16937e84027657Cce21C1cC3a6a",
+      "startBlock": 6599181
+    }
+  },
+
+  "holesky": {
+    "Staking": {
+      "address": "0x3B61C76fAD6c88FA565Ed538524d10C25f63ee75",
+      "startBlock": 2235273
+    },
+    "StakingToken": {
+      "address": "0x09572c39b311834047b694EC77A614822ffBb1ff",
+      "startBlock": 2235259
+    },
+    "RewardToken": {
+      "address": "0xc0C357bCCc6CFfeef97b792c72774b4c47B3D884",
+      "startBlock": 2235265
+    },
+    "AMM": {
+      "address": "0x21fb6F632054669EA240adAF0BCd6930Ba029A82",
+      "startBlock": 2235284
+    }
+  },
+
+  "polygon-amoy": {
+    "Staking": {
+      "address": "0x3B61C76fAD6c88FA565Ed538524d10C25f63ee75",
+      "startBlock": 11348339
+    },
+    "RewardToken": {
+      "address": "0xc0C357bCCc6CFfeef97b792c72774b4c47B3D884",
+      "startBlock": 11348330
+    },
+    "AMM": {
+      "address": "0x21fb6F632054669EA240adAF0BCd6930Ba029A82",
+      "startBlock": 11348358
+    },
+    "StakingToken": {
+      "address": "0x09572c39b311834047b694EC77A614822ffBb1ff",
+      "startBlock": 11348320
+    }
+  }
+}
